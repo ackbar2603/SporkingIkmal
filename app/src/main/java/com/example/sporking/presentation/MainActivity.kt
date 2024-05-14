@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SporkingTheme {
-                loginScreen()
+                sporkingApp()
 
 
 //                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
