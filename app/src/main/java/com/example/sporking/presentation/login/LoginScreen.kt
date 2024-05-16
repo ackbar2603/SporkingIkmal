@@ -1,8 +1,10 @@
-package com.example.sporking.presentation
+package com.example.sporking.presentation.login
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,12 +22,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.sporking.R
+import com.example.sporking.navigation.Screen
 import com.example.sporking.ui.theme.Orange01
 
 
 @Composable
 fun loginScreen (
+    navController: NavController,
     modifier: Modifier = Modifier
 ){
     Column (
@@ -112,7 +117,15 @@ fun loginScreen (
 
         Spacer(modifier = Modifier.height(50.dp))
 
-        Text(text = "Sudah punya akun? Masuk di sini")
+        Row (
+        ){
+            Text(text = "Sudah punya akun?")
+            Spacer(Modifier.size(5.dp))
+            Text(text = "Masuk di sini",
+                modifier = Modifier.clickable { navController.navigate(Screen.SignIn.route) },
+                color = Color.Blue
+            )
+        }
 
         Spacer(modifier = Modifier.height(70.dp))
     }

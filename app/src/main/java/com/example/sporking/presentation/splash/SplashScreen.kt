@@ -1,4 +1,4 @@
-package com.example.sporking.presentation
+package com.example.sporking.presentation.splash
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

@@ -9,6 +9,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.sporking.navigation.Screen
+import com.example.sporking.presentation.login.loginScreen
+import com.example.sporking.presentation.signin.signInScreen
+import com.example.sporking.presentation.signup.signUpScreen
+import com.example.sporking.presentation.splash.splashScreen
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
@@ -24,7 +28,13 @@ fun sporkingApp(
             splashScreen(navController)
         }
         composable(Screen.Login.route){
-            loginScreen()
+            loginScreen(navController)
+        }
+        composable(Screen.SignIn.route){
+            signInScreen(navController)
+        }
+        composable(Screen.SignUp.route){
+            signUpScreen(navController)
         }
     }
 }
